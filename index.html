@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Book</title>
+    <script src="vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/014a14165b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="main-wrapper">
+
+        <h1 id="logo"> My Address Book </h1>
+
+ 
+
+        <div class="key-form" id="app">
+
+            <form v-on:submit.prevent="addContact" action="" class="myForm">
+
+                <label for="first-name">Firstname:</label><br>
+                <input v-model.lazy="firstName" type="text" name="first-name" id="first-name"> <br>
+                
+                <label for="last-name">Lastname:</label><br>
+                <input v-model.lazy="lastName" type="text" name="last-name" id="last-name"><br>    
+                
+                <label for="phone-number">Phone Number:</label><br>
+                <input v-model.lazy.number="phoneNumber" type="number" name="phone-number" id="phone-number"><br> 
+                
+                <label for="email">Email:</label><br>   
+                <input v-model.lazy="email" type="email" name="email" id="email"><br>
+                
+                <button type="submit">Add Contact</button>
+            </form>
+       
+
+        <div class="contact-display">
+
+            <div class="display-item">
+                <li>F.Name</li>
+               
+            </div>
+
+            <div class="display-item">
+                <li>L.Name</li>
+           
+            </div>
+
+            <div class="display-item">
+                <li ref="phoneNumber">Phone Number</li>
+  
+            </div>
+
+            <div class="display-item">
+                <li>Email</li>
+            
+            </div>
+
+            <div class="close-button" v-bind:class="{ 'close-buttton': isActive }">
+                <!-- <a class="close-button" href="" ><img src="./close.png" alt=""></a> -->
+                
+                <li id="list-item"><span><i class="fas fa-times"></i></span></li>
+            </div>
+            
+        </div>
+
+        <div class="display-item">
+            <ul v-for="(key, index) in contacts">
+                  <li>{{ key.firstName }}</li>
+                  <li>{{ key.lastName }}</li>
+                  <li>{{ key.phoneNumber }}</li>
+                  <li>{{ key.email }}</li>
+                </ul>
+            </div>
+
+    </div>
+
+
+    </div>
+
+   
+    <script src="app.js"></script>
+</body>
+</html>

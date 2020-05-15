@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+  
+*:focus {
+    outline: none;
+}
+
+body{
+    background-color: #193849;
+    color: white;
+}
+
+.main-wrapper{
+    overflow: hidden;
+    font-family: 'Playfair Display', serif;
+}
+
+h1{
+    text-align: center;
+    margin-top: .7em;
+    margin-bottom: 2em;
+}
+
+.banner{
+    text-align: center;
+    height: 5em;
+}
+
+.myForm{
+    margin:0 0 0 4em;
+    padding-bottom: 2em;
+}
+
+input{
+    margin-bottom: 2em;
+    margin-top: 1em;
+    width: 18em;
+    height: 2.5em;
+    background: none;
+    padding: 1em;
+    color: white;
+    font-family: 'Playfair Display', serif;
+}
+
+label{
+    padding-bottom: 1em;
+}
+
+button{
+    border: none;
+    padding: 1em;
+    margin-left: 5em;
+    background-color: #f74444;
+    font-family: 'Playfair Display', serif;
+    border-radius: 1em;
+}
+
+.contact-display{
+    display: flex;
+    justify-content: space-around;
+}
+
+.display-item li{
+    margin-top: 1em;
+    display: flex;
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+.display-item ul{
+    display: flex;
+}
+
+.fas, .fa-times{
+    margin-top: 1em;
+    color: rgb(233, 8, 8);
+    font-size: 1em;
+}
+
+.close-button img{
+    height: 2em;
+    width: 2em;
+}
+
+
+ul{
+    text-decoration: none;
+}
+
+
+@media (min-width:1024px) {
+    .myForm{
+        margin-left: 25em;
+    }
+
+    input{
+        height: 4em;
+        width: 45em;
+    }
+    
+    button{
+        margin-left: 20em;
+    }
+}
+
+
