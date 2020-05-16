@@ -38,35 +38,27 @@
 
         <div class="contact-display">
 
-            <div class="display-item">
-                <li>F.Name</li>
-               
-            </div>
-
-            <div class="display-item">
-                <li>L.Name</li>
-           
-            </div>
-
-            <div class="display-item">
-                <li ref="phoneNumber">Phone Number</li>
-  
-            </div>
-
-            <div class="display-item">
-                <li>Email</li>
+            <table style="width:100%">
+                <tr>
+                  <th>F.name</th>
+                  <th>L.name</th>
+                  <th>Phone No.</th>
+                  <th>Email</th>
+                </tr>
+                <tr v-for="(key, index) in contacts" v-if="show">
+                  <td>{{ key.firstName }}</td>
+                  <td>{{ key.lastName }}</td>
+                  <td>{{ key.phoneNumber }}</td>
+                  <td>{{ key.email }}</td>
+                  <td><button @click="close(index)" class="close-button" style="cursor: pointer"><i @click="show = !show" class="fas fa-times"></i></button></td>
+                </tr>
+              </table>
             
             </div>
-<!-- 
-            <div class="close-button" v-bind:class="{ 'close-buttton': isActive }"> -->
-                <!-- <a class="close-button" href="" ><img src="./close.png" alt=""></a> -->
-<!--                 
-                <li id="list-item"><span><i class="fas fa-times"></i></span></li>
-            </div> -->
             
         </div>
 
-        <div class="display-item">
+        <!-- <div class="display-item">
             <ul v-for="(key, index) in contacts" v-if="show">
                   <li>{{ key.firstName }}</li>
                   <li>{{ key.lastName }}</li>
@@ -74,7 +66,7 @@
                   <li>{{ key.email }}</li>
                   <li><button @click="close(index)" class="close-button" style="cursor: pointer"><i @click="show = !show" class="fas fa-times"></i></button></li>
                 </ul>
-            </div>
+            </div> -->
 
     </div>
 

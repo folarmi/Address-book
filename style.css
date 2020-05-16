@@ -31,7 +31,7 @@ h1{
 }
 
 .myForm{
-    margin:0 0 0 2em;
+    margin:0 0 0 4em;
     padding-bottom: 2em;
 }
 
@@ -64,17 +64,6 @@ button{
     justify-content: flex-start;
 }
 
-.display-item li{
-    margin-top: 1em;
-    display: flex;
-    margin-bottom: 1em;
-    margin-left: 1em;
-}
-
-.display-item ul{
-    display: flex;
-    justify-content: flex-start;
-}
 
 .fas, .fa-times{
     margin-top: 1em;
@@ -88,10 +77,6 @@ button{
     background-color: none;
 }
 
-
-ul{
-    text-decoration: none;
-}
 
 
 @media (min-width:1024px) {
@@ -108,18 +93,9 @@ ul{
         margin-left: 20em;
     }
 
-    .display-item ul{
-        display: flex;
-        justify-content: flex-start;
-    }
-
-    /* ul{
-        margin-left: 8.5em;
-    } */
-
-    .display-item li{
-        margin-left: 5em;
-    }
+    table, th, td {
+        text-align:center;
+      }
 }
 
 
