@@ -57,21 +57,22 @@
                 <li>Email</li>
             
             </div>
-
-            <div class="close-button" v-bind:class="{ 'close-buttton': isActive }">
+<!-- 
+            <div class="close-button" v-bind:class="{ 'close-buttton': isActive }"> -->
                 <!-- <a class="close-button" href="" ><img src="./close.png" alt=""></a> -->
-                
+<!--                 
                 <li id="list-item"><span><i class="fas fa-times"></i></span></li>
-            </div>
+            </div> -->
             
         </div>
 
         <div class="display-item">
-            <ul v-for="(key, index) in contacts">
+            <ul v-for="(key, index) in contacts" v-if="show">
                   <li>{{ key.firstName }}</li>
                   <li>{{ key.lastName }}</li>
                   <li>{{ key.phoneNumber }}</li>
                   <li>{{ key.email }}</li>
+                  <li><button @click="close(index)" class="close-button" style="cursor: pointer"><i @click="show = !show" class="fas fa-times"></i></button></li>
                 </ul>
             </div>
 
